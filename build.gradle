@@ -1,0 +1,32 @@
+buildscript {
+    repositories {
+        maven { url "https://maven.aliyun.com/nexus/content/groups/public" }
+        maven { url "https://maven.aliyun.com/nexus/content/repositories/gradle-plugin" }
+        mavenCentral()
+        maven { url "https://plugins.gradle.org/m2/" }
+    }
+}
+allprojects {
+    group = 'site.zido'
+    version = '1.0.0-SNAPSHOT'
+}
+subprojects {
+    version = '1.0'
+    apply plugin: 'java'
+    apply plugin: 'java-library'
+    sourceCompatibility = JavaVersion.VERSION_1_8
+    targetCompatibility = JavaVersion.VERSION_1_8
+    dependencies {
+        // This dependency is used by the application.
+        implementation 'com.google.guava:guava:28.2-jre'
+
+        // Use JUnit test framework
+        testImplementation 'junit:junit:4.12'
+    }
+    repositories {
+        maven { url "https://maven.aliyun.com/nexus/content/groups/public" }
+        maven { url "https://maven.aliyun.com/nexus/content/repositories/gradle-plugin" }
+        mavenCentral()
+        maven { url "https://plugins.gradle.org/m2/" }
+    }
+}
