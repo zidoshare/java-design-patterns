@@ -10,3 +10,10 @@
 rootProject.name = 'java-design-patterns'
 include '01-singleton'
 include '02-prototype'
+include '03-facotry-method'
+include '04-abstract-factory'
+include '05-builder'
+include '06-proxy'
+include '07-adapter'
+include '08-bridge'
+
