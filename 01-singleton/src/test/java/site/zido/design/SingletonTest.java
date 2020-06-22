@@ -4,9 +4,6 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.CountDownLatch;
 
-import org.junit.Assert;
-import org.junit.Test;
-
 import site.zido.design.base.InstanceCounter;
 
 public class SingletonTest {

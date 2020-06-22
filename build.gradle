@@ -1,9 +1,7 @@
 buildscript {
     repositories {
-        maven { url "https://maven.aliyun.com/nexus/content/groups/public" }
-        maven { url "https://maven.aliyun.com/nexus/content/repositories/gradle-plugin" }
-        mavenCentral()
-        maven { url "https://plugins.gradle.org/m2/" }
+        maven { url 'https://maven.aliyun.com/nexus/content/groups/public/' }
+        maven { url 'https://maven.oschina.net/content/groups/public/' }
     }
 }
 allprojects {
@@ -13,20 +11,22 @@ allprojects {
 subprojects {
     version = '1.0'
     apply plugin: 'java'
-    apply plugin: 'java-library'
     sourceCompatibility = JavaVersion.VERSION_1_8
     targetCompatibility = JavaVersion.VERSION_1_8
+    test {
+        useJUnitPlatform()
+    }
+    tasks.withType(GroovyCompile) {
+        groovyOptions.encoding = "UTF-8"
+    }
+    tasks.withType(JavaCompile) {
+        options.encoding = "UTF-8"
+    }
     dependencies {
-        // This dependency is used by the application.
-        implementation 'com.google.guava:guava:28.2-jre'
-
-        // Use JUnit test framework
-        testImplementation 'junit:junit:4.12'
+        testCompile("org.junit.jupiter:junit-jupiter:5.6.0")
     }
     repositories {
-        maven { url "https://maven.aliyun.com/nexus/content/groups/public" }
-        maven { url "https://maven.aliyun.com/nexus/content/repositories/gradle-plugin" }
-        mavenCentral()
-        maven { url "https://plugins.gradle.org/m2/" }
+        maven { url 'https://maven.aliyun.com/nexus/content/groups/public/' }
+        maven { url 'https://maven.oschina.net/content/groups/public/' }
     }
 }

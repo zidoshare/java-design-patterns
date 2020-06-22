@@ -16,4 +16,7 @@ include '05-builder'
 include '06-proxy'
 include '07-adapter'
 include '08-bridge'
+include '09-decorator'
+include '10-facade'
+include '11-flyweight'
 
