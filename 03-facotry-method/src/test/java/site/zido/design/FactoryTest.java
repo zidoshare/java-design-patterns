@@ -1,13 +1,13 @@
 package site.zido.design;
 
-import org.junit.Assert;
-import org.junit.Test;
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Test;
 
 public class FactoryTest {
     @Test
     public void testNewProduct() {
         AbstractFactory factory = (AbstractFactory) XmlReader.getObject();
         Product product = factory.newProduct();
-        Assert.assertEquals(1, product.show());
+        Assertions.assertEquals(1, product.show());
     }
 }

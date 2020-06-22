@@ -1,7 +1,7 @@
 package site.zido.design;
 
-import org.junit.Assert;
-import org.junit.Test;
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Test;
 
 public class BuilderTest {
     @Test
@@ -10,8 +10,8 @@ public class BuilderTest {
         Director director = new Director(builder);
         Product product = director.construct();
 
-        Assert.assertEquals("part1", product.getPart1());
-        Assert.assertEquals("part2", product.getPart2());
-        Assert.assertEquals("part3", product.getPart3());
+        Assertions.assertEquals("part1", product.getPart1());
+        Assertions.assertEquals("part2", product.getPart2());
+        Assertions.assertEquals("part3", product.getPart3());
     }
 }
