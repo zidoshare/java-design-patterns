@@ -7,11 +7,27 @@ allprojects {
     group = 'site.zido'
     version = '1.0.0-SNAPSHOT'
 }
+def createDir = {
+    path ->
+        File dir = new File(path)
+        if (!dir.exists()) {
+            dir.mkdirs()
+        }
+}
 subprojects {
     version = '1.0'
     apply plugin: 'java'
     sourceCompatibility = JavaVersion.VERSION_1_8
     targetCompatibility = JavaVersion.VERSION_1_8
+    task makeJavaDir() {
+        //自动创建java标准目录
+        ['src/main/java',
+         'src/main/resources',
+         'src/test/java',
+         'src/test/resources'].forEach { path ->
+            createDir(projectDir.getAbsolutePath() + "/" + path)
+        }
+    }
     test {
         useJUnitPlatform()
     }
@@ -22,7 +38,7 @@ subprojects {
         options.encoding = "UTF-8"
     }
     dependencies {
-        testCompile("org.junit.jupiter:junit-jupiter:5.6.0")
+        testImplementation "org.junit.jupiter:junit-jupiter:5.6.0"
     }
     repositories {
         maven { url 'https://maven.aliyun.com/nexus/content/groups/public/' }
