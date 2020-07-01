@@ -1,8 +1,10 @@
-package site.zido.demo.spel;
+package site.zido.spring.spel.stand;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.expression.Expression;
 import org.springframework.expression.ExpressionParser;
+import org.springframework.expression.spel.SpelCompilerMode;
+import org.springframework.expression.spel.SpelParserConfiguration;
 import org.springframework.expression.spel.standard.SpelExpressionParser;
 import org.springframework.expression.spel.support.SimpleEvaluationContext;
 
@@ -110,5 +112,61 @@ public class ExpressionsTest {
 
         Boolean b = simple.booleanList.get(0);
         assertFalse(b);
+    }
+
+    /**
+     * 配置parser
+     */
+    @Test
+    public void testConfiguration() {
+        SpelParserConfiguration config = new SpelParserConfiguration(true, true);
+
+        ExpressionParser parser = new SpelExpressionParser(config);
+
+        // - 空引用自动初始化
+        // - 自动集合增长
+        Expression exp = parser.parseExpression("list[3]");
+
+        Demo demo = new Demo();
+
+        Object o = exp.getValue(demo);
+
+        assertEquals("", o);
+    }
+
+    /**
+     * 默认情况下， SpEL  表达式只有在求值时才会进行表达式计算，所以表达式可以在运行时进行动态修改。但如果一个表达式被重复调用的次数很多，那么就必须使用
+     * SpelCompiler 编译器来保证性能。
+     * SpelCompiler 编译器会将表达式编译成字节码，只有在运行时表达式发生变化时，才会被重新编译。
+     * SpelCompiler 编译器适用于被调用的频率较高且表达式不经常发生变化的场景。
+     * <p>
+     * 编译模式
+     * 说明
+     * <p>
+     * <p>
+     * OFF
+     * 不启用编译模式（默认）。可在 spring.properties 中通过 spring.expression.compiler.mode 属性进行全局设置。
+     * <p>
+     * <p>
+     * MIXED
+     * 在混合模式下，随着时间的推移，表达式会从解释模式自动切换到编译模式。即前面使用解释模式，当调用次数达到某个阈值后，改为使用编译模式。
+     * <p>
+     * <p>
+     * IMMEDIATE
+     * 启用编译模式。实际内部在调用第一次之后，才会真正使用编译模式。
+     *
+     */
+    @Test
+    public void testCompiler() {
+        SpelParserConfiguration config = new SpelParserConfiguration(SpelCompilerMode.IMMEDIATE,
+                this.getClass().getClassLoader());
+
+        SpelExpressionParser parser = new SpelExpressionParser(config);
+
+        Expression expr = parser.parseExpression("payload");
+
+        MyMessage message = new MyMessage();
+
+        Object payload = expr.getValue(message);
     }
 }
