@@ -14,18 +14,25 @@ def createDir = {
             dir.mkdirs()
         }
 }
+
+ext {
+    SPRING_VERSION = "5.2.1.RELEASE"
+}
+
 subprojects {
     version = '1.0'
     apply plugin: 'java'
     sourceCompatibility = JavaVersion.VERSION_1_8
     targetCompatibility = JavaVersion.VERSION_1_8
     task makeJavaDir() {
-        //自动创建java标准目录
-        ['src/main/java',
-         'src/main/resources',
-         'src/test/java',
-         'src/test/resources'].forEach { path ->
-            createDir(projectDir.getAbsolutePath() + "/" + path)
+        doFirst {
+            //自动创建java标准目录
+            ['src/main/java',
+             'src/main/resources',
+             'src/test/java',
+             'src/test/resources'].forEach { path ->
+                createDir(projectDir.getAbsolutePath() + "/" + path)
+            }
         }
     }
     test {
