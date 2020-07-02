@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+    <bean name="one" class="site.zido.spring.XmlBeanOne">
+        <property name="name" value="a"/>
+        <property name="value" value="b"/>
+    </bean>
+    <bean id="two" class="site.zido.spring.XmlBeanTwo">
+        <constructor-arg index="0" value="a"/>
+        <constructor-arg index="1" value="b"/>
+    </bean>
+</beans>
