@@ -1,0 +1,618 @@
+  Compiled from "SynchronizedDemo.java"
+public class site.zido.sync.SynchronizedDemo
+  minor version: 0
+  major version: 52
+  flags: ACC_PUBLIC, ACC_SUPER
+Constant pool:
+    #1 = Methodref          #2.#90        // java/lang/Object."<init>":()V
+    #2 = Class              #91           // java/lang/Object
+    #3 = Fieldref           #29.#92       // site/zido/sync/SynchronizedDemo.object_monitor:Ljava/lang/Object;
+    #4 = Fieldref           #93.#94       // java/lang/System.out:Ljava/io/PrintStream;
+    #5 = String             #95           // 静态同步方法开始
+    #6 = Methodref          #96.#97       // java/io/PrintStream.println:(Ljava/lang/String;)V
+    #7 = Long               1000l
+    #9 = Methodref          #24.#98       // java/lang/Thread.sleep:(J)V
+   #10 = String             #99           // 静态同步方法结束
+   #11 = String             #100          // 实例同步方法开始
+   #12 = String             #101          // 实例同步方法结束
+   #13 = String             #102          // 实例同步方法2开始
+   #14 = Long               3000l
+   #16 = String             #103          // 实例同步方法2结束
+   #17 = Fieldref           #29.#104      // site/zido/sync/SynchronizedDemo.STATIC_MONITOR:Ljava/lang/Object;
+   #18 = String             #105          // 静态对象同步方法1开始
+   #19 = String             #106          // 静态对象同步方法1结束
+   #20 = String             #107          // 静态对象同步方法2开始
+   #21 = String             #108          // 静态对象同步方法2结束
+   #22 = String             #109          // 类属性对象同步方法2开始
+   #23 = String             #110          // 类属性对象同步方法2结束
+   #24 = Class              #111          // java/lang/Thread
+   #25 = InvokeDynamic      #0:#116       // #0:run:()Ljava/lang/Runnable;
+   #26 = Methodref          #24.#117      // java/lang/Thread."<init>":(Ljava/lang/Runnable;)V
+   #27 = Methodref          #24.#118      // java/lang/Thread.start:()V
+   #28 = InvokeDynamic      #1:#116       // #1:run:()Ljava/lang/Runnable;
+   #29 = Class              #120          // site/zido/sync/SynchronizedDemo
+   #30 = Methodref          #29.#90       // site/zido/sync/SynchronizedDemo."<init>":()V
+   #31 = InvokeDynamic      #2:#122       // #2:run:(Lsite/zido/sync/SynchronizedDemo;)Ljava/lang/Runnable;
+   #32 = InvokeDynamic      #3:#122       // #3:run:(Lsite/zido/sync/SynchronizedDemo;)Ljava/lang/Runnable;
+   #33 = InvokeDynamic      #4:#122       // #4:run:(Lsite/zido/sync/SynchronizedDemo;)Ljava/lang/Runnable;
+   #34 = InvokeDynamic      #5:#122       // #5:run:(Lsite/zido/sync/SynchronizedDemo;)Ljava/lang/Runnable;
+   #35 = InvokeDynamic      #6:#122       // #6:run:(Lsite/zido/sync/SynchronizedDemo;)Ljava/lang/Runnable;
+   #36 = InvokeDynamic      #7:#122       // #7:run:(Lsite/zido/sync/SynchronizedDemo;)Ljava/lang/Runnable;
+   #37 = Methodref          #29.#128      // site/zido/sync/SynchronizedDemo.blockMethod1:()V
+   #38 = Class              #129          // java/lang/InterruptedException
+   #39 = Methodref          #38.#130      // java/lang/InterruptedException.printStackTrace:()V
+   #40 = Methodref          #29.#131      // site/zido/sync/SynchronizedDemo.blockStaticMethod2:()V
+   #41 = Methodref          #29.#132      // site/zido/sync/SynchronizedDemo.blockStaticMethod1:()V
+   #42 = Methodref          #29.#133      // site/zido/sync/SynchronizedDemo.method2:()V
+   #43 = Methodref          #29.#134      // site/zido/sync/SynchronizedDemo.method:()V
+   #44 = Methodref          #29.#135      // site/zido/sync/SynchronizedDemo.staticMethod:()V
+   #45 = Utf8               STATIC_MONITOR
+   #46 = Utf8               Ljava/lang/Object;
+   #47 = Utf8               object_monitor
+   #48 = Utf8               <init>
+   #49 = Utf8               ()V
+   #50 = Utf8               Code
+   #51 = Utf8               LineNumberTable
+   #52 = Utf8               LocalVariableTable
+   #53 = Utf8               this
+   #54 = Utf8               Lsite/zido/sync/SynchronizedDemo;
+   #55 = Utf8               staticMethod
+   #56 = Utf8               Exceptions
+   #57 = Utf8               method
+   #58 = Utf8               method2
+   #59 = Utf8               blockStaticMethod1
+   #60 = Utf8               StackMapTable
+   #61 = Class              #120          // site/zido/sync/SynchronizedDemo
+   #62 = Class              #91           // java/lang/Object
+   #63 = Class              #136          // java/lang/Throwable
+   #64 = Utf8               blockStaticMethod2
+   #65 = Utf8               blockMethod1
+   #66 = Utf8               blockMethod2
+   #67 = Utf8               main
+   #68 = Utf8               ([Ljava/lang/String;)V
+   #69 = Utf8               args
+   #70 = Utf8               [Ljava/lang/String;
+   #71 = Utf8               synDemo
+   #72 = Utf8               thread1
+   #73 = Utf8               Ljava/lang/Thread;
+   #74 = Utf8               thread2
+   #75 = Utf8               lambda$main$7
+   #76 = Utf8               (Lsite/zido/sync/SynchronizedDemo;)V
+   #77 = Utf8               e
+   #78 = Utf8               Ljava/lang/InterruptedException;
+   #79 = Class              #129          // java/lang/InterruptedException
+   #80 = Utf8               lambda$main$6
+   #81 = Utf8               lambda$main$5
+   #82 = Utf8               lambda$main$4
+   #83 = Utf8               lambda$main$3
+   #84 = Utf8               lambda$main$2
+   #85 = Utf8               lambda$main$1
+   #86 = Utf8               lambda$main$0
+   #87 = Utf8               <clinit>
+   #88 = Utf8               SourceFile
+   #89 = Utf8               SynchronizedDemo.java
+   #90 = NameAndType        #48:#49       // "<init>":()V
+   #91 = Utf8               java/lang/Object
+   #92 = NameAndType        #47:#46       // object_monitor:Ljava/lang/Object;
+   #93 = Class              #137          // java/lang/System
+   #94 = NameAndType        #138:#139     // out:Ljava/io/PrintStream;
+   #95 = Utf8               静态同步方法开始
+   #96 = Class              #140          // java/io/PrintStream
+   #97 = NameAndType        #141:#142     // println:(Ljava/lang/String;)V
+   #98 = NameAndType        #143:#144     // sleep:(J)V
+   #99 = Utf8               静态同步方法结束
+  #100 = Utf8               实例同步方法开始
+  #101 = Utf8               实例同步方法结束
+  #102 = Utf8               实例同步方法2开始
+  #103 = Utf8               实例同步方法2结束
+  #104 = NameAndType        #45:#46       // STATIC_MONITOR:Ljava/lang/Object;
+  #105 = Utf8               静态对象同步方法1开始
+  #106 = Utf8               静态对象同步方法1结束
+  #107 = Utf8               静态对象同步方法2开始
+  #108 = Utf8               静态对象同步方法2结束
+  #109 = Utf8               类属性对象同步方法2开始
+  #110 = Utf8               类属性对象同步方法2结束
+  #111 = Utf8               java/lang/Thread
+  #112 = Utf8               BootstrapMethods
+  #113 = MethodHandle       #6:#145       // invokestatic java/lang/invoke/LambdaMetafactory.metafactory:(Ljava/lang/invoke/MethodHandles$Lookup;Ljava/lang/String;Ljava/lang/invoke/MethodType;Ljava/lang/invoke/MethodType;Ljava/lang/invoke/MethodHandle;Ljava/lang/invoke/MethodType;)Ljava/lang/invoke/CallSite;
+  #114 = MethodType         #49           //  ()V
+  #115 = MethodHandle       #6:#146       // invokestatic site/zido/sync/SynchronizedDemo.lambda$main$0:()V
+  #116 = NameAndType        #147:#148     // run:()Ljava/lang/Runnable;
+  #117 = NameAndType        #48:#149      // "<init>":(Ljava/lang/Runnable;)V
+  #118 = NameAndType        #150:#49      // start:()V
+  #119 = MethodHandle       #6:#151       // invokestatic site/zido/sync/SynchronizedDemo.lambda$main$1:()V
+  #120 = Utf8               site/zido/sync/SynchronizedDemo
+  #121 = MethodHandle       #6:#152       // invokestatic site/zido/sync/SynchronizedDemo.lambda$main$2:(Lsite/zido/sync/SynchronizedDemo;)V
+  #122 = NameAndType        #147:#153     // run:(Lsite/zido/sync/SynchronizedDemo;)Ljava/lang/Runnable;
+  #123 = MethodHandle       #6:#154       // invokestatic site/zido/sync/SynchronizedDemo.lambda$main$3:(Lsite/zido/sync/SynchronizedDemo;)V
+  #124 = MethodHandle       #6:#155       // invokestatic site/zido/sync/SynchronizedDemo.lambda$main$4:(Lsite/zido/sync/SynchronizedDemo;)V
+  #125 = MethodHandle       #6:#156       // invokestatic site/zido/sync/SynchronizedDemo.lambda$main$5:(Lsite/zido/sync/SynchronizedDemo;)V
+  #126 = MethodHandle       #6:#157       // invokestatic site/zido/sync/SynchronizedDemo.lambda$main$6:(Lsite/zido/sync/SynchronizedDemo;)V
+  #127 = MethodHandle       #6:#158       // invokestatic site/zido/sync/SynchronizedDemo.lambda$main$7:(Lsite/zido/sync/SynchronizedDemo;)V
+  #128 = NameAndType        #65:#49       // blockMethod1:()V
+  #129 = Utf8               java/lang/InterruptedException
+  #130 = NameAndType        #159:#49      // printStackTrace:()V
+  #131 = NameAndType        #64:#49       // blockStaticMethod2:()V
+  #132 = NameAndType        #59:#49       // blockStaticMethod1:()V
+  #133 = NameAndType        #58:#49       // method2:()V
+  #134 = NameAndType        #57:#49       // method:()V
+  #135 = NameAndType        #55:#49       // staticMethod:()V
+  #136 = Utf8               java/lang/Throwable
+  #137 = Utf8               java/lang/System
+  #138 = Utf8               out
+  #139 = Utf8               Ljava/io/PrintStream;
+  #140 = Utf8               java/io/PrintStream
+  #141 = Utf8               println
+  #142 = Utf8               (Ljava/lang/String;)V
+  #143 = Utf8               sleep
+  #144 = Utf8               (J)V
+  #145 = Methodref          #160.#161     // java/lang/invoke/LambdaMetafactory.metafactory:(Ljava/lang/invoke/MethodHandles$Lookup;Ljava/lang/String;Ljava/lang/invoke/MethodType;Ljava/lang/invoke/MethodType;Ljava/lang/invoke/MethodHandle;Ljava/lang/invoke/MethodType;)Ljava/lang/invoke/CallSite;
+  #146 = Methodref          #29.#162      // site/zido/sync/SynchronizedDemo.lambda$main$0:()V
+  #147 = Utf8               run
+  #148 = Utf8               ()Ljava/lang/Runnable;
+  #149 = Utf8               (Ljava/lang/Runnable;)V
+  #150 = Utf8               start
+  #151 = Methodref          #29.#163      // site/zido/sync/SynchronizedDemo.lambda$main$1:()V
+  #152 = Methodref          #29.#164      // site/zido/sync/SynchronizedDemo.lambda$main$2:(Lsite/zido/sync/SynchronizedDemo;)V
+  #153 = Utf8               (Lsite/zido/sync/SynchronizedDemo;)Ljava/lang/Runnable;
+  #154 = Methodref          #29.#165      // site/zido/sync/SynchronizedDemo.lambda$main$3:(Lsite/zido/sync/SynchronizedDemo;)V
+  #155 = Methodref          #29.#166      // site/zido/sync/SynchronizedDemo.lambda$main$4:(Lsite/zido/sync/SynchronizedDemo;)V
+  #156 = Methodref          #29.#167      // site/zido/sync/SynchronizedDemo.lambda$main$5:(Lsite/zido/sync/SynchronizedDemo;)V
+  #157 = Methodref          #29.#168      // site/zido/sync/SynchronizedDemo.lambda$main$6:(Lsite/zido/sync/SynchronizedDemo;)V
+  #158 = Methodref          #29.#169      // site/zido/sync/SynchronizedDemo.lambda$main$7:(Lsite/zido/sync/SynchronizedDemo;)V
+  #159 = Utf8               printStackTrace
+  #160 = Class              #170          // java/lang/invoke/LambdaMetafactory
+  #161 = NameAndType        #171:#175     // metafactory:(Ljava/lang/invoke/MethodHandles$Lookup;Ljava/lang/String;Ljava/lang/invoke/MethodType;Ljava/lang/invoke/MethodType;Ljava/lang/invoke/MethodHandle;Ljava/lang/invoke/MethodType;)Ljava/lang/invoke/CallSite;
+  #162 = NameAndType        #86:#49       // lambda$main$0:()V
+  #163 = NameAndType        #85:#49       // lambda$main$1:()V
+  #164 = NameAndType        #84:#76       // lambda$main$2:(Lsite/zido/sync/SynchronizedDemo;)V
+  #165 = NameAndType        #83:#76       // lambda$main$3:(Lsite/zido/sync/SynchronizedDemo;)V
+  #166 = NameAndType        #82:#76       // lambda$main$4:(Lsite/zido/sync/SynchronizedDemo;)V
+  #167 = NameAndType        #81:#76       // lambda$main$5:(Lsite/zido/sync/SynchronizedDemo;)V
+  #168 = NameAndType        #80:#76       // lambda$main$6:(Lsite/zido/sync/SynchronizedDemo;)V
+  #169 = NameAndType        #75:#76       // lambda$main$7:(Lsite/zido/sync/SynchronizedDemo;)V
+  #170 = Utf8               java/lang/invoke/LambdaMetafactory
+  #171 = Utf8               metafactory
+  #172 = Class              #177          // java/lang/invoke/MethodHandles$Lookup
+  #173 = Utf8               Lookup
+  #174 = Utf8               InnerClasses
+  #175 = Utf8               (Ljava/lang/invoke/MethodHandles$Lookup;Ljava/lang/String;Ljava/lang/invoke/MethodType;Ljava/lang/invoke/MethodType;Ljava/lang/invoke/MethodHandle;Ljava/lang/invoke/MethodType;)Ljava/lang/invoke/CallSite;
+  #176 = Class              #178          // java/lang/invoke/MethodHandles
+  #177 = Utf8               java/lang/invoke/MethodHandles$Lookup
+  #178 = Utf8               java/lang/invoke/MethodHandles
+{
+  public site.zido.sync.SynchronizedDemo();
+    descriptor: ()V
+    flags: ACC_PUBLIC
+    Code:
+      stack=3, locals=1, args_size=1
+         0: aload_0
+         1: invokespecial #1                  // Method java/lang/Object."<init>":()V
+         4: aload_0
+         5: new           #2                  // class java/lang/Object
+         8: dup
+         9: invokespecial #1                  // Method java/lang/Object."<init>":()V
+        12: putfield      #3                  // Field object_monitor:Ljava/lang/Object;
+        15: return
+      LineNumberTable:
+        line 3: 0
+        line 6: 4
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+            0      16     0  this   Lsite/zido/sync/SynchronizedDemo;
+
+  public static synchronized void staticMethod() throws java.lang.InterruptedException;
+    descriptor: ()V
+    flags: ACC_PUBLIC, ACC_STATIC, ACC_SYNCHRONIZED
+    Code:
+      stack=2, locals=0, args_size=0
+         0: getstatic     #4                  // Field java/lang/System.out:Ljava/io/PrintStream;
+         3: ldc           #5                  // String 静态同步方法开始
+         5: invokevirtual #6                  // Method java/io/PrintStream.println:(Ljava/lang/String;)V
+         8: ldc2_w        #7                  // long 1000l
+        11: invokestatic  #9                  // Method java/lang/Thread.sleep:(J)V
+        14: getstatic     #4                  // Field java/lang/System.out:Ljava/io/PrintStream;
+        17: ldc           #10                 // String 静态同步方法结束
+        19: invokevirtual #6                  // Method java/io/PrintStream.println:(Ljava/lang/String;)V
+        22: return
+      LineNumberTable:
+        line 9: 0
+        line 10: 8
+        line 11: 14
+        line 12: 22
+    Exceptions:
+      throws java.lang.InterruptedException
+
+  public synchronized void method() throws java.lang.InterruptedException;
+    descriptor: ()V
+    flags: ACC_PUBLIC, ACC_SYNCHRONIZED
+    Code:
+      stack=2, locals=1, args_size=1
+         0: getstatic     #4                  // Field java/lang/System.out:Ljava/io/PrintStream;
+         3: ldc           #11                 // String 实例同步方法开始
+         5: invokevirtual #6                  // Method java/io/PrintStream.println:(Ljava/lang/String;)V
+         8: ldc2_w        #7                  // long 1000l
+        11: invokestatic  #9                  // Method java/lang/Thread.sleep:(J)V
+        14: getstatic     #4                  // Field java/lang/System.out:Ljava/io/PrintStream;
+        17: ldc           #12                 // String 实例同步方法结束
+        19: invokevirtual #6                  // Method java/io/PrintStream.println:(Ljava/lang/String;)V
+        22: return
+      LineNumberTable:
+        line 15: 0
+        line 16: 8
+        line 17: 14
+        line 18: 22
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+            0      23     0  this   Lsite/zido/sync/SynchronizedDemo;
+    Exceptions:
+      throws java.lang.InterruptedException
+
+  public synchronized void method2() throws java.lang.InterruptedException;
+    descriptor: ()V
+    flags: ACC_PUBLIC, ACC_SYNCHRONIZED
+    Code:
+      stack=2, locals=1, args_size=1
+         0: getstatic     #4                  // Field java/lang/System.out:Ljava/io/PrintStream;
+         3: ldc           #13                 // String 实例同步方法2开始
+         5: invokevirtual #6                  // Method java/io/PrintStream.println:(Ljava/lang/String;)V
+         8: ldc2_w        #14                 // long 3000l
+        11: invokestatic  #9                  // Method java/lang/Thread.sleep:(J)V
+        14: getstatic     #4                  // Field java/lang/System.out:Ljava/io/PrintStream;
+        17: ldc           #16                 // String 实例同步方法2结束
+        19: invokevirtual #6                  // Method java/io/PrintStream.println:(Ljava/lang/String;)V
+        22: return
+      LineNumberTable:
+        line 21: 0
+        line 22: 8
+        line 23: 14
+        line 24: 22
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+            0      23     0  this   Lsite/zido/sync/SynchronizedDemo;
+    Exceptions:
+      throws java.lang.InterruptedException
+
+  public void blockStaticMethod1() throws java.lang.InterruptedException;
+    descriptor: ()V
+    flags: ACC_PUBLIC
+    Code:
+      stack=2, locals=3, args_size=1
+         0: getstatic     #17                 // Field STATIC_MONITOR:Ljava/lang/Object;
+         3: dup
+         4: astore_1
+         5: monitorenter
+         6: getstatic     #4                  // Field java/lang/System.out:Ljava/io/PrintStream;
+         9: ldc           #18                 // String 静态对象同步方法1开始
+        11: invokevirtual #6                  // Method java/io/PrintStream.println:(Ljava/lang/String;)V
+        14: ldc2_w        #14                 // long 3000l
+        17: invokestatic  #9                  // Method java/lang/Thread.sleep:(J)V
+        20: getstatic     #4                  // Field java/lang/System.out:Ljava/io/PrintStream;
+        23: ldc           #19                 // String 静态对象同步方法1结束
+        25: invokevirtual #6                  // Method java/io/PrintStream.println:(Ljava/lang/String;)V
+        28: aload_1
+        29: monitorexit
+        30: goto          38
+        33: astore_2
+        34: aload_1
+        35: monitorexit
+        36: aload_2
+        37: athrow
+        38: return
+      Exception table:
+         from    to  target type
+             6    30    33   any
+            33    36    33   any
+      LineNumberTable:
+        line 27: 0
+        line 28: 6
+        line 29: 14
+        line 30: 20
+        line 31: 28
+        line 32: 38
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+            0      39     0  this   Lsite/zido/sync/SynchronizedDemo;
+      StackMapTable: number_of_entries = 2
+        frame_type = 255 /* full_frame */
+          offset_delta = 33
+          locals = [ class site/zido/sync/SynchronizedDemo, class java/lang/Object ]
+          stack = [ class java/lang/Throwable ]
+        frame_type = 250 /* chop */
+          offset_delta = 4
+    Exceptions:
+      throws java.lang.InterruptedException
+
+  public void blockStaticMethod2() throws java.lang.InterruptedException;
+    descriptor: ()V
+    flags: ACC_PUBLIC
+    Code:
+      stack=2, locals=3, args_size=1
+         0: getstatic     #17                 // Field STATIC_MONITOR:Ljava/lang/Object;
+         3: dup
+         4: astore_1
+         5: monitorenter
+         6: getstatic     #4                  // Field java/lang/System.out:Ljava/io/PrintStream;
+         9: ldc           #20                 // String 静态对象同步方法2开始
+        11: invokevirtual #6                  // Method java/io/PrintStream.println:(Ljava/lang/String;)V
+        14: ldc2_w        #14                 // long 3000l
+        17: invokestatic  #9                  // Method java/lang/Thread.sleep:(J)V
+        20: getstatic     #4                  // Field java/lang/System.out:Ljava/io/PrintStream;
+        23: ldc           #21                 // String 静态对象同步方法2结束
+        25: invokevirtual #6                  // Method java/io/PrintStream.println:(Ljava/lang/String;)V
+        28: aload_1
+        29: monitorexit
+        30: goto          38
+        33: astore_2
+        34: aload_1
+        35: monitorexit
+        36: aload_2
+        37: athrow
+        38: return
+      Exception table:
+         from    to  target type
+             6    30    33   any
+            33    36    33   any
+      LineNumberTable:
+        line 35: 0
+        line 36: 6
+        line 37: 14
+        line 38: 20
+        line 39: 28
+        line 40: 38
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+            0      39     0  this   Lsite/zido/sync/SynchronizedDemo;
+      StackMapTable: number_of_entries = 2
+        frame_type = 255 /* full_frame */
+          offset_delta = 33
+          locals = [ class site/zido/sync/SynchronizedDemo, class java/lang/Object ]
+          stack = [ class java/lang/Throwable ]
+        frame_type = 250 /* chop */
+          offset_delta = 4
+    Exceptions:
+      throws java.lang.InterruptedException
+
+  public void blockMethod1() throws java.lang.InterruptedException;
+    descriptor: ()V
+    flags: ACC_PUBLIC
+    Code:
+      stack=2, locals=3, args_size=1
+         0: getstatic     #17                 // Field STATIC_MONITOR:Ljava/lang/Object;
+         3: dup
+         4: astore_1
+         5: monitorenter
+         6: getstatic     #4                  // Field java/lang/System.out:Ljava/io/PrintStream;
+         9: ldc           #22                 // String 类属性对象同步方法2开始
+        11: invokevirtual #6                  // Method java/io/PrintStream.println:(Ljava/lang/String;)V
+        14: ldc2_w        #14                 // long 3000l
+        17: invokestatic  #9                  // Method java/lang/Thread.sleep:(J)V
+        20: getstatic     #4                  // Field java/lang/System.out:Ljava/io/PrintStream;
+        23: ldc           #23                 // String 类属性对象同步方法2结束
+        25: invokevirtual #6                  // Method java/io/PrintStream.println:(Ljava/lang/String;)V
+        28: aload_1
+        29: monitorexit
+        30: goto          38
+        33: astore_2
+        34: aload_1
+        35: monitorexit
+        36: aload_2
+        37: athrow
+        38: return
+      Exception table:
+         from    to  target type
+             6    30    33   any
+            33    36    33   any
+      LineNumberTable:
+        line 43: 0
+        line 44: 6
+        line 45: 14
+        line 46: 20
+        line 47: 28
+        line 48: 38
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+            0      39     0  this   Lsite/zido/sync/SynchronizedDemo;
+      StackMapTable: number_of_entries = 2
+        frame_type = 255 /* full_frame */
+          offset_delta = 33
+          locals = [ class site/zido/sync/SynchronizedDemo, class java/lang/Object ]
+          stack = [ class java/lang/Throwable ]
+        frame_type = 250 /* chop */
+          offset_delta = 4
+    Exceptions:
+      throws java.lang.InterruptedException
+
+  public void blockMethod2() throws java.lang.InterruptedException;
+    descriptor: ()V
+    flags: ACC_PUBLIC
+    Code:
+      stack=2, locals=3, args_size=1
+         0: getstatic     #17                 // Field STATIC_MONITOR:Ljava/lang/Object;
+         3: dup
+         4: astore_1
+         5: monitorenter
+         6: getstatic     #4                  // Field java/lang/System.out:Ljava/io/PrintStream;
+         9: ldc           #22                 // String 类属性对象同步方法2开始
+        11: invokevirtual #6                  // Method java/io/PrintStream.println:(Ljava/lang/String;)V
+        14: ldc2_w        #14                 // long 3000l
+        17: invokestatic  #9                  // Method java/lang/Thread.sleep:(J)V
+        20: getstatic     #4                  // Field java/lang/System.out:Ljava/io/PrintStream;
+        23: ldc           #23                 // String 类属性对象同步方法2结束
+        25: invokevirtual #6                  // Method java/io/PrintStream.println:(Ljava/lang/String;)V
+        28: aload_1
+        29: monitorexit
+        30: goto          38
+        33: astore_2
+        34: aload_1
+        35: monitorexit
+        36: aload_2
+        37: athrow
+        38: return
+      Exception table:
+         from    to  target type
+             6    30    33   any
+            33    36    33   any
+      LineNumberTable:
+        line 51: 0
+        line 52: 6
+        line 53: 14
+        line 54: 20
+        line 55: 28
+        line 56: 38
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+            0      39     0  this   Lsite/zido/sync/SynchronizedDemo;
+      StackMapTable: number_of_entries = 2
+        frame_type = 255 /* full_frame */
+          offset_delta = 33
+          locals = [ class site/zido/sync/SynchronizedDemo, class java/lang/Object ]
+          stack = [ class java/lang/Throwable ]
+        frame_type = 250 /* chop */
+          offset_delta = 4
+    Exceptions:
+      throws java.lang.InterruptedException
+
+  public static void main(java.lang.String[]);
+    descriptor: ([Ljava/lang/String;)V
+    flags: ACC_PUBLIC, ACC_STATIC
+    Code:
+      stack=3, locals=4, args_size=1
+         0: new           #24                 // class java/lang/Thread
+         3: dup
+         4: invokedynamic #25,  0             // InvokeDynamic #0:run:()Ljava/lang/Runnable;
+         9: invokespecial #26                 // Method java/lang/Thread."<init>":(Ljava/lang/Runnable;)V
+        12: invokevirtual #27                 // Method java/lang/Thread.start:()V
+        15: new           #24                 // class java/lang/Thread
+        18: dup
+        19: invokedynamic #28,  0             // InvokeDynamic #1:run:()Ljava/lang/Runnable;
+        24: invokespecial #26                 // Method java/lang/Thread."<init>":(Ljava/lang/Runnable;)V
+        27: invokevirtual #27                 // Method java/lang/Thread.start:()V
+        30: new           #29                 // class site/zido/sync/SynchronizedDemo
+        33: dup
+        34: invokespecial #30                 // Method "<init>":()V
+        37: astore_1
+        38: new           #24                 // class java/lang/Thread
+        41: dup
+        42: aload_1
+        43: invokedynamic #31,  0             // InvokeDynamic #2:run:(Lsite/zido/sync/SynchronizedDemo;)Ljava/lang/Runnable;
+        48: invokespecial #26                 // Method java/lang/Thread."<init>":(Ljava/lang/Runnable;)V
+        51: astore_2
+        52: new           #24                 // class java/lang/Thread
+        55: dup
+        56: aload_1
+        57: invokedynamic #32,  0             // InvokeDynamic #3:run:(Lsite/zido/sync/SynchronizedDemo;)Ljava/lang/Runnable;
+        62: invokespecial #26                 // Method java/lang/Thread."<init>":(Ljava/lang/Runnable;)V
+        65: astore_3
+        66: aload_2
+        67: invokevirtual #27                 // Method java/lang/Thread.start:()V
+        70: aload_3
+        71: invokevirtual #27                 // Method java/lang/Thread.start:()V
+        74: new           #24                 // class java/lang/Thread
+        77: dup
+        78: aload_1
+        79: invokedynamic #33,  0             // InvokeDynamic #4:run:(Lsite/zido/sync/SynchronizedDemo;)Ljava/lang/Runnable;
+        84: invokespecial #26                 // Method java/lang/Thread."<init>":(Ljava/lang/Runnable;)V
+        87: invokevirtual #27                 // Method java/lang/Thread.start:()V
+        90: new           #24                 // class java/lang/Thread
+        93: dup
+        94: aload_1
+        95: invokedynamic #34,  0             // InvokeDynamic #5:run:(Lsite/zido/sync/SynchronizedDemo;)Ljava/lang/Runnable;
+       100: invokespecial #26                 // Method java/lang/Thread."<init>":(Ljava/lang/Runnable;)V
+       103: invokevirtual #27                 // Method java/lang/Thread.start:()V
+       106: new           #24                 // class java/lang/Thread
+       109: dup
+       110: aload_1
+       111: invokedynamic #35,  0             // InvokeDynamic #6:run:(Lsite/zido/sync/SynchronizedDemo;)Ljava/lang/Runnable;
+       116: invokespecial #26                 // Method java/lang/Thread."<init>":(Ljava/lang/Runnable;)V
+       119: invokevirtual #27                 // Method java/lang/Thread.start:()V
+       122: new           #24                 // class java/lang/Thread
+       125: dup
+       126: aload_1
+       127: invokedynamic #36,  0             // InvokeDynamic #7:run:(Lsite/zido/sync/SynchronizedDemo;)Ljava/lang/Runnable;
+       132: invokespecial #26                 // Method java/lang/Thread."<init>":(Ljava/lang/Runnable;)V
+       135: invokevirtual #27                 // Method java/lang/Thread.start:()V
+       138: return
+      LineNumberTable:
+        line 61: 0
+        line 67: 12
+        line 69: 15
+        line 75: 27
+        line 77: 30
+        line 79: 38
+        line 86: 52
+        line 93: 66
+        line 94: 70
+        line 97: 74
+        line 103: 87
+        line 105: 90
+        line 111: 103
+        line 114: 106
+        line 120: 119
+        line 122: 122
+        line 128: 135
+        line 129: 138
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+            0     139     0  args   [Ljava/lang/String;
+           38     101     1 synDemo   Lsite/zido/sync/SynchronizedDemo;
+           52      87     2 thread1   Ljava/lang/Thread;
+           66      73     3 thread2   Ljava/lang/Thread;
+
+  static {};
+    descriptor: ()V
+    flags: ACC_STATIC
+    Code:
+      stack=2, locals=0, args_size=0
+         0: new           #2                  // class java/lang/Object
+         3: dup
+         4: invokespecial #1                  // Method java/lang/Object."<init>":()V
+         7: putstatic     #17                 // Field STATIC_MONITOR:Ljava/lang/Object;
+        10: return
+      LineNumberTable:
+        line 5: 0
+}
+SourceFile: "SynchronizedDemo.java"
+InnerClasses:
+     public static final #173= #172 of #176; //Lookup=class java/lang/invoke/MethodHandles$Lookup of class java/lang/invoke/MethodHandles
+BootstrapMethods:
+  0: #113 invokestatic java/lang/invoke/LambdaMetafactory.metafactory:(Ljava/lang/invoke/MethodHandles$Lookup;Ljava/lang/String;Ljava/lang/invoke/MethodType;Ljava/lang/invoke/MethodType;Ljava/lang/invoke/MethodHandle;Ljava/lang/invoke/MethodType;)Ljava/lang/invoke/CallSite;
+    Method arguments:
+      #114 ()V
+      #115 invokestatic site/zido/sync/SynchronizedDemo.lambda$main$0:()V
+      #114 ()V
+  1: #113 invokestatic java/lang/invoke/LambdaMetafactory.metafactory:(Ljava/lang/invoke/MethodHandles$Lookup;Ljava/lang/String;Ljava/lang/invoke/MethodType;Ljava/lang/invoke/MethodType;Ljava/lang/invoke/MethodHandle;Ljava/lang/invoke/MethodType;)Ljava/lang/invoke/CallSite;
+    Method arguments:
+      #114 ()V
+      #119 invokestatic site/zido/sync/SynchronizedDemo.lambda$main$1:()V
+      #114 ()V
+  2: #113 invokestatic java/lang/invoke/LambdaMetafactory.metafactory:(Ljava/lang/invoke/MethodHandles$Lookup;Ljava/lang/String;Ljava/lang/invoke/MethodType;Ljava/lang/invoke/MethodType;Ljava/lang/invoke/MethodHandle;Ljava/lang/invoke/MethodType;)Ljava/lang/invoke/CallSite;
+    Method arguments:
+      #114 ()V
+      #121 invokestatic site/zido/sync/SynchronizedDemo.lambda$main$2:(Lsite/zido/sync/SynchronizedDemo;)V
+      #114 ()V
+  3: #113 invokestatic java/lang/invoke/LambdaMetafactory.metafactory:(Ljava/lang/invoke/MethodHandles$Lookup;Ljava/lang/String;Ljava/lang/invoke/MethodType;Ljava/lang/invoke/MethodType;Ljava/lang/invoke/MethodHandle;Ljava/lang/invoke/MethodType;)Ljava/lang/invoke/CallSite;
+    Method arguments:
+      #114 ()V
+      #123 invokestatic site/zido/sync/SynchronizedDemo.lambda$main$3:(Lsite/zido/sync/SynchronizedDemo;)V
+      #114 ()V
+  4: #113 invokestatic java/lang/invoke/LambdaMetafactory.metafactory:(Ljava/lang/invoke/MethodHandles$Lookup;Ljava/lang/String;Ljava/lang/invoke/MethodType;Ljava/lang/invoke/MethodType;Ljava/lang/invoke/MethodHandle;Ljava/lang/invoke/MethodType;)Ljava/lang/invoke/CallSite;
+    Method arguments:
+      #114 ()V
+      #124 invokestatic site/zido/sync/SynchronizedDemo.lambda$main$4:(Lsite/zido/sync/SynchronizedDemo;)V
+      #114 ()V
+  5: #113 invokestatic java/lang/invoke/LambdaMetafactory.metafactory:(Ljava/lang/invoke/MethodHandles$Lookup;Ljava/lang/String;Ljava/lang/invoke/MethodType;Ljava/lang/invoke/MethodType;Ljava/lang/invoke/MethodHandle;Ljava/lang/invoke/MethodType;)Ljava/lang/invoke/CallSite;
+    Method arguments:
+      #114 ()V
+      #125 invokestatic site/zido/sync/SynchronizedDemo.lambda$main$5:(Lsite/zido/sync/SynchronizedDemo;)V
+      #114 ()V
+  6: #113 invokestatic java/lang/invoke/LambdaMetafactory.metafactory:(Ljava/lang/invoke/MethodHandles$Lookup;Ljava/lang/String;Ljava/lang/invoke/MethodType;Ljava/lang/invoke/MethodType;Ljava/lang/invoke/MethodHandle;Ljava/lang/invoke/MethodType;)Ljava/lang/invoke/CallSite;
+    Method arguments:
+      #114 ()V
+      #126 invokestatic site/zido/sync/SynchronizedDemo.lambda$main$6:(Lsite/zido/sync/SynchronizedDemo;)V
+      #114 ()V
+  7: #113 invokestatic java/lang/invoke/LambdaMetafactory.metafactory:(Ljava/lang/invoke/MethodHandles$Lookup;Ljava/lang/String;Ljava/lang/invoke/MethodType;Ljava/lang/invoke/MethodType;Ljava/lang/invoke/MethodHandle;Ljava/lang/invoke/MethodType;)Ljava/lang/invoke/CallSite;
+    Method arguments:
+      #114 ()V
+      #127 invokestatic site/zido/sync/SynchronizedDemo.lambda$main$7:(Lsite/zido/sync/SynchronizedDemo;)V
+      #114 ()V
