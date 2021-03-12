@@ -1,6 +1,5 @@
 package site.zido.spring.callbacks;
 
-import org.springframework.context.Lifecycle;
 import org.springframework.context.SmartLifecycle;
 
 public class LifeCycleImpl implements SmartLifecycle {
