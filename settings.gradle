@@ -8,6 +8,8 @@
  */
 
 rootProject.name = 'java-learning'
+//算法
+include 'algorithm:dp'
 //设计模式
 include 'design:01-creator:01-singleton'
 include 'design:01-creator:02-prototype'
@@ -33,6 +35,8 @@ include 'design:03-behavior:21-iterator'
 include 'design:03-behavior:22-visitor'
 include 'design:03-behavior:23-memento'
 include 'design:03-behavior:24-interpreter'
+//reactor
+include 'reactor:demo'
 //Spring
 include 'spring:01-core:01-ioc'
 include 'spring:01-core:03-data'
